@@ -248,92 +248,92 @@ function toggleTheme(){ document.body.classList.toggle('light-theme'); }
 const questions = [
   {
     pilar: "Configuração de Moradia",
-    question: "Como é a configuração da sua residência no dia a dia?",
+    question: "1. Como é a configuração da sua residência no dia a dia?",
     options: [
-      { txt: "Moro em um ambiente compartilhado onde a responsabilidade e a bagunça causam forte estresse no meu dia a dia.", points: 10, max: 10, feedback: "Sobrecarga habitacional severa: ambiente gerador de alto estresse cotidiano." },
-      { txt: "Moro com outras pessoas, a convivência é ok, mas sinto que falta organização e padrão nos espaços.", points: 7, max: 10, feedback: "Convivência com atritos moderados: necessidade de padronização espacial." },
-      { txt: "Moro com facilidade de alinhamento e a rotina da casa flui de forma organizada e tranquila.", points: 3, max: 10, feedback: "Rotina equilibrada: ambiente harmonioso e sem urgência crítica." }
+      { txt: "A) Moro em um ambiente compartilhado onde a responsabilidade e a bagunça causam forte estresse no meu dia a dia.", points: 10, max: 10, feedback: "Sobrecarga habitacional severa: ambiente gerador de alto estresse cotidiano." },
+      { txt: "B) Moro com outras pessoas, a convivência é ok, mas sinto que falta organização e padrão nos espaços.", points: 7, max: 10, feedback: "Convivência com atritos moderados: necessidade de padronização espacial." },
+      { txt: "C) Moro com facilidade de alinhamento e a rotina da casa flui de forma organizada e tranquila.", points: 3, max: 10, feedback: "Rotina equilibrada: ambiente harmonioso e sem urgência crítica." }
     ]
   },
   {
     pilar: "Apoio e Cuidados com a Casa",
-    question: "Como você lida com a divisão e a execução das tarefas da casa no dia a dia?",
+    question: "2. Como você lida com a divisão e a execução das tarefas da casa no dia a dia?",
     options: [
-      { txt: "Fico praticamente responsável por tudo e me sinto totalmente sobrecarregado(a) e esgotado(a).", points: 10, max: 10, feedback: "Esgotamento operacional máximo: centralização absoluta das demandas." },
-      { txt: "Há divisão de tarefas, mas a responsabilidade mental de gerenciar tudo recai sobre mim, o que me gera muito desgaste.", points: 7, max: 10, feedback: "Carga mental elevada: gestão exclusiva recaindo sobre uma única pessoa." },
-      { txt: "As tarefas são bem divididas e a rotina flui de forma leve e equilibrada.", points: 3, max: 10, feedback: "Equilíbrio na delegação: tarefas e responsabilidades bem distribuídas." }
+      { txt: "A) Fico praticamente responsável por tudo e me sinto totalmente sobrecarregado(a) e esgotado(a).", points: 10, max: 10, feedback: "Esgotamento operacional máximo: centralização absoluta das demandas." },
+      { txt: "B) Há divisão de tarefas, mas a responsabilidade mental de gerenciar tudo recai sobre mim, o que me gera muito desgaste.", points: 7, max: 10, feedback: "Carga mental elevada: gestão exclusiva recaindo sobre uma única pessoa." },
+      { txt: "C) As tarefas são bem divididas e a rotina flui de forma leve e equilibrada.", points: 3, max: 10, feedback: "Equilíbrio na delegação: tarefas e responsabilidades bem distribuídas." }
     ]
   },
   {
     pilar: "Alimentos e Despensa",
-    question: "Como você lida com a organização da sua geladeira e despensa no dia a dia?",
+    question: "3. Como você lida com a organização da sua geladeira e despensa no dia a dia?",
     options: [
-      { txt: "Perco tempo e dinheiro porque frequentemente acho itens vencidos ou esquecidos, gerando muito desperdício e frustração.", points: 10, max: 10, feedback: "Prejuízo recorrente: perda financeira e de tempo por falta de controle de prazos." },
-      { txt: "Meus mantimentos estão guardados, mas falta padronização e facilidade para visualizar o que tenho, o que me atrapalha na rotina.", points: 7, max: 10, feedback: "Armazenamento sem visibilidade: fluxo de mantimentos prejudicado." },
-      { txt: "Tudo está bem organizado, categorizado e com excelente controle, sem nenhuma dor de cabeça nessa área.", points: 3, max: 10, feedback: "Despensa otimizada: controle absoluto e sem desperdícios." }
+      { txt: "A) Perco tempo e dinheiro porque frequentemente acho itens vencidos ou esquecidos, gerando muito desperdício e frustração.", points: 10, max: 10, feedback: "Prejuízo recorrente: perda financeira e de tempo por falta de controle de prazos." },
+      { txt: "B) Meus mantimentos estão guardados, mas falta padronização e facilidade para visualizar o que tenho, o que me atrapalha na rotina.", points: 7, max: 10, feedback: "Armazenamento sem visibilidade: fluxo de mantimentos prejudicado." },
+      { txt: "C) Tudo está bem organizado, categorizado e com excelente controle, sem nenhuma dor de cabeça nessa área.", points: 3, max: 10, feedback: "Despensa otimizada: controle absoluto e sem desperdícios." }
     ]
   },
   {
     pilar: "Fluxo Culinário e Higiene",
-    question: "Como costuma ser a sua rotina de compras, higienização dos alimentos e preparo das refeições?",
+    question: "4. Como costuma ser a sua rotina de compras, higienização dos alimentos e preparo das refeições?",
     options: [
-      { txt: "Esse processo é caótico, demorado e me causa um desgaste físico e mental enorme toda vez que preciso cozinhar.", points: 10, max: 10, feedback: "Atrito culinário severo: manipulação de alimentos gerando exaustão." },
-      { txt: "Funciona, mas é cansativo e toma mais tempo do que eu gostaria no meu dia a dia corrido.", points: 7, max: 10, feedback: "Processo ineficiente: consumo excessivo de tempo na rotina da cozinha." },
-      { txt: "A rotina de cozinha é extremamente prática, ágil e bem resolvida.", points: 3, max: 10, feedback: "Cozinha fluida: manipulação limpa, ágil e sem atrito operacional." }
+      { txt: "A) Esse processo é caótico, demorado e me causa um desgaste físico e mental enorme toda vez que preciso cozinhar.", points: 10, max: 10, feedback: "Atrito culinário severo: manipulação de alimentos gerando exaustão." },
+      { txt: "B) Funciona, mas é cansativo e toma mais tempo do que eu gostaria no meu dia a dia corrido.", points: 7, max: 10, feedback: "Processo ineficiente: consumo excessivo de tempo na rotina da cozinha." },
+      { txt: "C) A rotina de cozinha é extremamente prática, ágil e bem resolvida.", points: 3, max: 10, feedback: "Cozinha fluida: manipulação limpa, ágil e sem atrito operacional." }
     ]
   },
   {
     pilar: "Biossegurança e Saneantes",
-    question: "Como é feito o armazenamento e manuseio dos produtos de limpeza na sua casa?",
+    question: "5. Como é feito o armazenamento e manuseio dos produtos de limpeza na sua casa?",
     options: [
-      { txt: "Ficam misturados ou acessíveis, sem controle rígido de diluição e segurança.", points: 10, max: 10, feedback: "Risco de biossegurança: guarda inadequada de saneantes." },
-      { txt: "Estão na área de serviço, mas faltam rótulos, dosadores ou separação por função.", points: 7, max: 10, feedback: "Organização informal de produtos: exige padronização de uso." },
-      { txt: "Setorizados com segurança, rotulagem adequada e longe de alimentos/pets.", points: 3, max: 10, feedback: "Biossegurança controlada: armazenamento seguro e normatizado." }
+      { txt: "A) Ficam misturados ou acessíveis, sem controle rígido de diluição e segurança.", points: 10, max: 10, feedback: "Risco de biossegurança: guarda inadequada de saneantes." },
+      { txt: "B) Estão na área de serviço, mas faltam rótulos, dosadores ou separação por função.", points: 7, max: 10, feedback: "Organização informal de produtos: exige padronização de uso." },
+      { txt: "C) Setorizados com segurança, rotulagem adequada e longe de alimentos/pets.", points: 3, max: 10, feedback: "Biossegurança controlada: armazenamento seguro e normatizado." }
     ]
   },
   {
     pilar: "Ciclo de Lavanderia",
-    question: "Como está o fluxo de roupas sujas, lavagem, passagem e guarda de rouparia?",
+    question: "6. Como está o fluxo de roupas sujas, lavagem, passagem e guarda de rouparia?",
     options: [
-      { txt: "Acumulam-se pilhas em diferentes etapas (esperando lavar, passar ou guardar).", points: 10, max: 10, feedback: "Retenção têxtil crítica: gargalos em múltiplas etapas do ciclo." },
-      { txt: "As roupas são lavadas, mas a etapa de passar e guardar nos closets é demorada.", points: 7, max: 10, feedback: "Lentidão na finalização de roupas: acúmulo na fase de closets." },
-      { txt: "Ciclo contínuo e organizado: a roupa limpa retorna rapidamente ao closet.", points: 3, max: 10, feedback: "Gestão têxtil exemplar: lavanderia operando com ritmo contínuo." }
+      { txt: "A) Acumulam-se pilhas em diferentes etapas (esperando lavar, passar ou guardar).", points: 10, max: 10, feedback: "Retenção têxtil crítica: gargalos em múltiplas etapas do ciclo." },
+      { txt: "B) As roupas são lavadas, mas a etapa de passar e guardar nos closets é demorada.", points: 7, max: 10, feedback: "Lentidão na finalização de roupas: acúmulo na fase de closets." },
+      { txt: "C) Ciclo contínuo e organizado: a roupa limpa retorna rapidamente ao closet.", points: 3, max: 10, feedback: "Gestão têxtil exemplar: lavanderia operando com ritmo contínuo." }
     ]
   },
   {
     pilar: "Áreas Sociais e Reset",
-    question: "Ao final do dia, como ficam as superfícies da sala e áreas de convivência?",
+    question: "7. Ao final do dia, como ficam as superfícies da sala e áreas de convivência?",
     options: [
-      { txt: "Acumulam-se objetos espalhados ('cantinhos da bagunça') que incomodam visualmente.", points: 10, max: 10, feedback: "Poluição visual crônica: ausência de endereçamento e reset diário." },
-      { txt: "A casa fica razoável, mas exige esforço constante no fim do dia para recolher itens.", points: 7, max: 10, feedback: "Manutenção manual exaustiva: dependência de esforço diário pesado." },
-      { txt: "Tudo volta facilmente ao seu devido lugar e o ambiente se mantém harmônico.", points: 3, max: 10, feedback: "Ambiente estável: superfícies livres e organização sustentável." }
+      { txt: "A) Acumulam-se objetos espalhados ('cantinhos da bagunça') que incomodam visualmente.", points: 10, max: 10, feedback: "Poluição visual crônica: ausência de endereçamento e reset diário." },
+      { txt: "B) A casa fica razoável, mas exige esforço constante no fim do dia para recolher itens.", points: 7, max: 10, feedback: "Manutenção manual exaustiva: dependência de esforço diário pesado." },
+      { txt: "C) Tudo volta facilmente ao seu devido lugar e o ambiente se mantém harmônico.", points: 3, max: 10, feedback: "Ambiente estável: superfícies livres e organização sustentável." }
     ]
   },
   {
     pilar: "Closets e Dormitórios",
-    question: "Como você avalia a organização interna dos armários, gavetas e o espaço de descanso?",
+    question: "8. Como você avalia a organização interna dos armários, gavetas e o espaço de descanso?",
     options: [
-      { txt: "Armários cheios e sem categorização, dificultando encontrar roupas e gerando poluição visual.", points: 10, max: 10, feedback: "Closet colapsado: excesso de itens sem triagem ou método." },
-      { txt: "Está organizado por externo, mas as gavetas e cabides internamente são despadronizados.", points: 7, max: 10, feedback: "Organização superficial: necessita de padronização interna avançada." },
-      { txt: "Excelente visualização interna, peças categorizadas e ambiente voltado ao descanso.", points: 3, max: 10, feedback: "Dormitórios estruturados: apoio adequado ao descanso e clareza visual." }
+      { txt: "A) Armários cheios e sem categorização, dificultando encontrar roupas e gerando poluição visual.", points: 10, max: 10, feedback: "Closet colapsado: excesso de itens sem triagem ou método." },
+      { txt: "B) Está organizado por externo, mas as gavetas e cabides internamente são despadronizados.", points: 7, max: 10, feedback: "Organização superficial: necessita de padronização interna avançada." },
+      { txt: "C) Excelente visualização interna, peças categorizadas e ambiente voltado ao descanso.", points: 3, max: 10, feedback: "Dormitórios estruturados: apoio adequado ao descanso e clareza visual." }
     ]
   },
   {
     pilar: "Banheiros e Cosméticos",
-    question: "Como estão organizados os cosméticos, maquiagens e itens de higiene pessoal?",
+    question: "9. Como estão organizados os cosméticos, maquiagens e itens de higiene pessoal?",
     options: [
-      { txt: "Produtos misturados, com itens fora da validade ou embalagens acumuladas no lavabo.", points: 10, max: 10, feedback: "Acúmulo e validade vencida: descontrole em itens de uso pessoal." },
-      { txt: "Guardados em armários/gavetas, mas difíceis de visualizar no uso diário.", points: 7, max: 10, feedback: "Espaço subutilizado: dificuldade de acesso rápido no dia a dia." },
-      { txt: "Produtos setorizados por uso, validades em dia e superfícies sempre limpas.", points: 3, max: 10, feedback: "Higiene organizada: bancadas livres e controle sanitário em dia." }
+      { txt: "A) Produtos misturados, com itens fora da validade ou embalagens acumuladas no lavabo.", points: 10, max: 10, feedback: "Acúmulo e validade vencida: descontrole em itens de uso pessoal." },
+      { txt: "B) Guardados em armários/gavetas, mas difíceis de visualizar no uso diário.", points: 7, max: 10, feedback: "Espaço subutilizado: dificuldade de acesso rápido no dia a dia." },
+      { txt: "C) Produtos setorizados por uso, validades em dia e superfícies sempre limpas.", points: 3, max: 10, feedback: "Higiene organizada: bancadas livres e controle sanitário em dia." }
     ]
   },
   {
     pilar: "Prontidão e Desejo",
-    question: "Qual o formato ideal de suporte que você busca para manter a sua residência organizada?",
+    question: "10. Qual o formato ideal de suporte que você busca para manter a sua residência organizada?",
     options: [
-      { txt: "Preciso de intervenção imediata e acompanhamento direto para sanar pontos críticos e gargalos urgentes.", points: 10, max: 10, feedback: "Alta urgência por suporte direcionado e consultoria dedicada." },
-      { txt: "Quero implementar um sistema estruturado de melhoria por etapas na rotina da minha casa.", points: 7, max: 10, feedback: "Demanda processos estruturados e programas guiados por etapas." },
-      { txt: "Desejo apenas referências pontuais ou autonomia para gerir o dia a dia por conta própria.", points: 3, max: 10, feedback: "Busca autonomia sem necessidade de intervenção externa robusta." }
+      { txt: "A) Preciso de intervenção imediata e acompanhamento direto para sanar pontos críticos e gargalos urgentes.", points: 10, max: 10, feedback: "Alta urgência por suporte direcionado e consultoria dedicada." },
+      { txt: "B) Quero implementar um sistema estruturado de melhoria por etapas na rotina da minha casa.", points: 7, max: 10, feedback: "Demanda processos estruturados e programas guiados por etapas." },
+      { txt: "C) Desejo apenas referências pontuais ou autonomia para gerir o dia a dia por conta própria.", points: 3, max: 10, feedback: "Busca autonomia sem necessidade de intervenção externa robusta." }
     ]
   }
 ];
@@ -500,7 +500,7 @@ function generateResult(e) {
           <strong style="color:var(--plug-white);font-size:.9rem">&#x1F4CC; ${item.pilar}</strong>
           <span style="font-size:.7rem;font-weight:900;background:var(--theme-bg-soft);color:var(--theme-accent);padding:.2rem .6rem;border-radius:6px">${item.points} / ${item.max} pts</span>
         </div>
-        <p style="color:var(--plug-white);font-weight:600;font-size:.84rem;margin-bottom:.3rem;line-height:1.4">P: ${item.question}</p>
+        <p style="color:var(--plug-white);font-weight:600;font-size:.84rem;margin-bottom:.3rem;line-height:1.4">${item.question}</p>
         <p style="color:var(--theme-accent);font-size:.82rem;margin-bottom:.5rem;line-height:1.4">R: "${item.answerText}"</p>
         <p style="color:var(--plug-muted);font-size:.8rem;line-height:1.4;border-top:1px solid var(--plug-gray);padding-top:.4rem"><strong>Análise:</strong> ${item.feedback}</p>
       `;
@@ -535,7 +535,7 @@ function selecionarServico(nomeServico) {
   
   globalLeadData.respostas.forEach((item, idx) => {
     relatorioTexto += `\n*${idx + 1}. [${item.pilar}]* (${item.pontos} pts)\n`;
-    relatorioTexto += `❓ *P:* ${item.pergunta}\n`;
+    relatorioTexto += `❓ *P:* ${item.question}\n`;
     relatorioTexto += `✔️ *R:* ${item.answerText}\n`;
   });
 
