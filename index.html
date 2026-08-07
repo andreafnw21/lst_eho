@@ -1,9 +1,8 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>EHO — Eficiência em Higiene e Organização do Lar</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -39,9 +38,9 @@ body{background:var(--plug-black);color:var(--plug-white);min-height:100vh;font-
 .option-card:hover{color:var(--plug-white);background:var(--theme-bg-soft);border-color:var(--theme-primary);transform:translateX(4px);}
 .option-selected{color:var(--plug-white) !important;background:var(--theme-bg-soft) !important;border-color:var(--theme-primary) !important;}
 .progress-bar{background:linear-gradient(90deg,#356859,#5CB69C);transition:width .7s cubic-bezier(.4,0,.2,1);}
-input,select{color:var(--plug-white);background:var(--plug-dark);border:1.5px solid var(--plug-gray);border-radius:12px;outline:none;width:100%;padding:1rem 1.1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;transition:border-color .2s;}
-input:focus,select:focus{border-color:var(--theme-primary);}
-input::placeholder{color:var(--plug-muted);}
+input,select,textarea{color:var(--plug-white);background:var(--plug-dark);border:1.5px solid var(--plug-gray);border-radius:12px;outline:none;width:100%;padding:1rem 1.1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;transition:border-color .2s;resize:vertical;}
+input:focus,select:focus,textarea:focus{border-color:var(--theme-primary);}
+input::placeholder,textarea::placeholder{color:var(--plug-muted);}
 select option{background:var(--plug-dark);color:var(--plug-white);}
 @keyframes spin{to{transform:rotate(360deg);}}
 @keyframes fadeUp{0%{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
@@ -117,6 +116,7 @@ select option{background:var(--plug-dark);color:var(--plug-white);}
 <div><label class="block text-[11px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Localização</label><select autocomplete="address-level2" id="input-cidade" required><option disabled selected value="" data-penalty="0">Onde o imóvel está localizado?</option><option value="Sao Paulo" data-penalty="0">São Paulo</option><option value="Caieiras / Cajamar" data-penalty="2">Eixo (Perto de SP): Caieiras, Cajamar, etc.</option><option value="Jundiai / Itupeva" data-penalty="4">Eixo (Distância Média): Jundiaí, Itupeva, etc.</option><option value="Louveira / Vinhedo" data-penalty="3">Eixo (Perto de Campinas): Louveira, Vinhedo, etc.</option><option value="Campinas" data-penalty="1">Campinas</option><option value="Outras Cidades" data-penalty="5">Outra cidade ou estado</option></select></div>
 <div><label class="block text-[11px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Tipo de Imóvel</label><select autocomplete="off" id="input-imovel" required><option disabled selected value="">Selecione o tipo</option><option value="Apartamento Padrao">Apartamento Padrão</option><option value="Casa Padrao">Casa Padrão</option><option value="Cobertura / Alto Padrao">Casa de Alto Padrão / Cobertura</option><option value="Em fase de mudanca">Em fase de mudança/reforma</option></select></div>
 <div><label class="block text-[11px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Maior Desafio Atual</label><select autocomplete="off" id="input-desafio" required><option disabled selected value="">Qual o principal ponto de atrito?</option><option value="Alimentacao e Despensa">Desorganização de Alimentos e Despensa</option><option value="Limpeza e Manutencao">Dificuldade em manter a Limpeza e Higiene</option><option value="Falta de Tempo">Falta de Tempo / Dinâmica do Dia a Dia</option><option value="Falta de Integração">A residência não atende plenamente às necessidades da família</option></select></div>
+<div><label class="block text-[11px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Envie dúvidas ou observações (Opcional)</label><textarea name="observacoes" placeholder="Escreva aqui se tiver alguma observação extra..." id="input-observacoes" rows="3"></textarea></div>
 <button class="w-full py-5 btn-action text-base mt-4 shadow-xl">VER MEU NÍVEL DE ORGANIZAÇÃO →</button>
 </form></div>
 <div style="text-align:center;padding:3.5rem 2rem;display:none" id="screen-loading"><div style="border:3px solid var(--plug-gray);border-top-color:var(--theme-accent);border-radius:50%;width:52px;height:52px;margin:0 auto 1.5rem;animation:.9s linear infinite spin"></div><p style="color:var(--theme-accent);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:900">Calculando seu nível de organização...</p></div>
@@ -141,9 +141,9 @@ select option{background:var(--plug-dark);color:var(--plug-white);}
   <div class="rounded-2xl p-6 mb-5" style="background:var(--plug-black);border:1px solid var(--plug-gray);">
     <h4 class="font-black text-[11px] uppercase tracking-widest mb-4 pb-2" style="color:var(--theme-accent);border-bottom:1px solid var(--plug-gray)">Classificação por Faixas de Desempenho</h4>
     <div class="flex flex-col gap-3 text-sm" style="color:var(--plug-white); line-height:1.6;">
-      <div id="faixa-1" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong>• 0 a 64 Pontos (Ajustes de Rotina):</strong> Pontos de atrito pontuais que exigem interação rápida.</div>
-      <div id="faixa-2" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong>• 65 a 84 Pontos (Casa em Ordem):</strong> Demanda estruturação de fluxos para que a rotina funcione com mais leveza.</div>
-      <div id="faixa-3" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong>• 85 a 100 Pontos (Experiência Exclusiva):</strong> Sobrecarga acentuada que exige aprofundamento estrutural e personalizado.</div>
+      <div id="faixa-1" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong>• 0 a 64 Pontos (Ajustes de Rotina):</strong> Atritos pontuais que exigem interação rápida.</div>
+      <div id="faixa-2" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong>• 65 a 84 Pontos (Casa em Ordem):</strong> Estruturação de fluxos para que a rotina funcione com mais leveza.</div>
+      <div id="faixa-3" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong>• 85 a 100 Pontos (Experiência Exclusiva):</strong> A atenção aos detalhes pede aprofundamento estrutural e personalizado.</div>
     </div>
   </div>
   <div class="rounded-2xl p-6 mb-6" style="background:var(--plug-black);border:1px solid var(--plug-gray);">
@@ -426,6 +426,7 @@ function generateResult(e) {
   let penaltyGeo = parseInt(cidadeEl.options[cidadeEl.selectedIndex].getAttribute('data-penalty') || "0", 10);
   let imovel = document.getElementById('input-imovel').value;
   let desafio = document.getElementById('input-desafio').value;
+  let observacoes = document.getElementById('input-observacoes').value.trim();
   
   if(whatsapp.replace(/\D/g, '').length < 10) {
     alert('WhatsApp inválido.');
@@ -444,6 +445,7 @@ function generateResult(e) {
     cidade: cidade,
     imovel: imovel,
     desafio: desafio,
+    observacoes: observacoes,
     scoreTotal: totalScore,
     respostas: userScores.map(u => ({ pilar: u.pilar, pergunta: u.question, pontos: u.points, resposta: u.answerText }))
   };
@@ -523,21 +525,25 @@ function selecionarServico(nomeServico) {
   let cidade = (globalLeadData && globalLeadData.cidade) ? globalLeadData.cidade : "Não informada";
   let imovel = (globalLeadData && globalLeadData.imovel) ? globalLeadData.imovel : "Não informado";
   let desafio = (globalLeadData && globalLeadData.desafio) ? globalLeadData.desafio : "Não informado";
+  let observacoes = (globalLeadData && globalLeadData.observacoes) ? globalLeadData.observacoes : "";
 
   let relatorioTexto = `*RELATÓRIO PRELIMINAR - EHO*\n`;
-  relatorioTexto += `� *Nome:* ${nome}\n`;
-  relatorioTexto += `� *Local:* ${cidade} | � *Imóvel:* ${imovel}\n`;
-  relatorioTexto += `� *Desafio Principal:* ${desafio}\n`;
-  relatorioTexto += `⭐ *Nível de Organização:* ${totalScore}/100 pontos\n`;
-  relatorioTexto += `� *Serviço Recomendado pelo Sistema:* ${servicoRecomendadoGlobal || 'Não catalogado'}\n`;
-  relatorioTexto += `� *Serviço Escolhido pelo Cliente:* *${nomeServico}*\n`;
+  relatorioTexto += `- *Nome:* ${nome}\n`;
+  relatorioTexto += `- *Local:* ${cidade} | *Imóvel:* ${imovel}\n`;
+  relatorioTexto += `- *Desafio Principal:* ${desafio}\n`;
+  if (observacoes) {
+    relatorioTexto += `- *Observações:* ${observacoes}\n`;
+  }
+  relatorioTexto += `- *Nível de Organização:* ${totalScore}/100 pontos\n`;
+  relatorioTexto += `- *Serviço Recomendado:* ${servicoRecomendadoGlobal || 'Não catalogado'}\n`;
+  relatorioTexto += `- *Serviço Escolhido:* *${nomeServico}*\n`;
 
   if (globalLeadData && globalLeadData.respostas) {
-    relatorioTexto += `\n� *Respostas Detalhadas:*\n`;
+    relatorioTexto += `\n*Respostas Detalhadas:*\n`;
     globalLeadData.respostas.forEach((item, idx) => {
       relatorioTexto += `\n*${idx + 1}. [${item.pilar}]* (${item.pontos} pts)\n`;
-      relatorioTexto += `❓ *P:* ${item.pergunta}\n`;
-      relatorioTexto += `✔️ *R:* ${item.resposta}\n`;
+      relatorioTexto += `- *P:* ${item.pergunta}\n`;
+      relatorioTexto += `- *R:* ${item.resposta}\n`;
     });
   }
 
