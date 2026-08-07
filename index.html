@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>EHO — Eficiência em Higiene e Organização do Lar</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -535,8 +535,8 @@ function selecionarServico(nomeServico) {
   
   globalLeadData.respostas.forEach((item, idx) => {
     relatorioTexto += `\n*${idx + 1}. [${item.pilar}]* (${item.pontos} pts)\n`;
-    relatorioTexto += `❓ *P:* ${item.question}\n`;
-    relatorioTexto += `✔️ *R:* ${item.answerText}\n`;
+    relatorioTexto += `❓ *P:* ${item.pergunta}\n`;
+    relatorioTexto += `✔️ *R:* ${item.resposta}\n`;
   });
 
   let msgWpp = encodeURIComponent(`Olá! Me chamo ${nome}, realizei o diagnóstico EHO, meu nível foi ${totalScore}/100 e escolhi o pacote *${nomeServico}*.\n\nAqui está o meu relatório:\n\n` + relatorioTexto);
