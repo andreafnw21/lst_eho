@@ -1,33 +1,105 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>EHO — Eficiência em Higiene e Organização do Lar</title><script src="https://cdn.tailwindcss.com"></script><style>@import"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap";:root{--plug-black:#0F1714;--plug-dark:#16221E;--plug-gray:#1E2D27;--plug-muted:#7A9086;--plug-white:#F4F7F6;--theme-primary:#356859;--theme-primary-hover:#458B75;--theme-accent:#5CB69C;--theme-bg-soft:rgba(53,104,89,0.12);--theme-border:rgba(53,104,89,0.3)}body.light-theme{--plug-black:#F4F7F6;--plug-dark:#FFFFFF;--plug-gray:#E2E8E4;--plug-muted:#5B7066;--plug-white:#0F1714;--theme-bg-soft:rgba(53,104,89,0.08);--theme-border:rgba(53,104,89,0.25)}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--plug-black);color:var(--plug-white);min-height:100vh;font-family:'Plus Jakarta Sans',sans-serif;transition:background-color .3s,color .3s}.card-main{box-shadow:0 32px 80px rgba(0,0,0,0.1),0 0 0 1px var(--theme-border)}.btn-action{text-transform:uppercase;letter-spacing:.06em;cursor:pointer;background:linear-gradient(135deg,#356859 0%,#224238 100%);border:none;border-radius:14px;font-weight:900;transition:all .3s;color:#ffffff !important}.btn-action:hover:not(:disabled){filter:brightness(1.15);transform:translateY(-2px);box-shadow:0 12px 28px rgba(53,104,89,0.4)}.btn-action:disabled{cursor:not-allowed;background:var(--plug-gray);transform:none;color:var(--plug-muted) !important}.option-card{cursor:pointer;color:var(--plug-muted);background:var(--plug-dark);border:1.5px solid var(--plug-gray);border-radius:14px;font-weight:500;transition:all .2s}.option-card:hover{color:var(--plug-white);background:var(--theme-bg-soft);border-color:var(--theme-primary);transform:translateX(4px)}.option-selected{color:var(--plug-white) !important;background:var(--theme-bg-soft) !important;border-color:var(--theme-primary) !important}.progress-bar{background:linear-gradient(90deg,#356859,#5CB69C);transition:width .7s cubic-bezier(.4,0,.2,1)}input,select{color:var(--plug-white);background:var(--plug-dark);border:1.5px solid var(--plug-gray);border-radius:12px;outline:none;width:100%;padding:1rem 1.1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;transition:border-color .2s}input:focus,select:focus{border-color:var(--theme-primary)}input::placeholder{color:var(--plug-muted)}select option{background:var(--plug-dark);color:var(--plug-white)}@keyframes spin{to{transform:rotate(360deg)}}@keyframes fadeUp{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}.fade-up{animation:.4s both fadeUp}</style></head>
-<body class="flex items-start justify-center min-h-screen">
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EHO — Eficiência em Higiene e Organização do Lar</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap";
+:root{
+  --plug-black:#0F1714;
+  --plug-dark:#16221E;
+  --plug-gray:#1E2D27;
+  --plug-muted:#A3B8B0;
+  --plug-white:#F4F7F6;
+  --theme-primary:#356859;
+  --theme-primary-hover:#458B75;
+  --theme-accent:#5CB69C;
+  --theme-bg-soft:rgba(53,104,89,0.15);
+  --theme-border:rgba(53,104,89,0.4);
+}
+body.light-theme{
+  --plug-black:#F4F7F6;
+  --plug-dark:#FFFFFF;
+  --plug-gray:#E2E8E4;
+  --plug-muted:#4A5E54;
+  --plug-white:#0F1714;
+  --theme-bg-soft:rgba(53,104,89,0.08);
+  --theme-border:rgba(53,104,89,0.25);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--plug-black);color:var(--plug-white);min-height:100vh;font-family:'Plus Jakarta Sans',sans-serif;transition:background-color 0.3s,color 0.3s;}
+.card-main{box-shadow:0 32px 80px rgba(0,0,0,0.2),0 0 0 1px var(--theme-border);}
+.btn-action{text-transform:uppercase;letter-spacing:.06em;cursor:pointer;background:linear-gradient(135deg,#356859 0%,#224238 100%);border:none;border-radius:14px;font-weight:900;transition:all .3s;color:#ffffff !important;}
+.btn-action:hover:not(:disabled){filter:brightness(1.15);transform:translateY(-2px);box-shadow:0 12px 28px rgba(53,104,89,0.4);}
+.btn-action:disabled{cursor:not-allowed;background:var(--plug-gray);transform:none;color:var(--plug-muted) !important;}
+.option-card{cursor:pointer;color:var(--plug-muted);background:var(--plug-dark);border:1.5px solid var(--plug-gray);border-radius:14px;font-weight:500;transition:all .2s;}
+.option-card:hover{color:var(--plug-white);background:var(--theme-bg-soft);border-color:var(--theme-primary);transform:translateX(4px);}
+.option-selected{color:var(--plug-white) !important;background:var(--theme-bg-soft) !important;border-color:var(--theme-primary) !important;}
+.progress-bar{background:linear-gradient(90deg,#356859,#5CB69C);transition:width .7s cubic-bezier(.4,0,.2,1);}
+input,select{color:var(--plug-white);background:var(--plug-dark);border:1.5px solid var(--plug-gray);border-radius:12px;outline:none;width:100%;padding:1rem 1.1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;transition:border-color .2s;}
+input:focus,select:focus{border-color:var(--theme-primary);}
+input::placeholder{color:var(--plug-muted);}
+select option{background:var(--plug-dark);color:var(--plug-white);}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+.fade-up{animation:.4s both fadeUp;}
+</style>
+</head>
+<body class="flex items-start justify-center min-h-screen p-2 md:p-6">
+
+<!-- BOTÃO E PAINEL ADMIN PROTEGIDO POR SENHA -->
+<div class="fixed bottom-4 left-4 z-50">
+  <button onclick="toggleAdminPanel()" id="btn-admin-toggle" class="px-3 py-2 text-[10px] font-black uppercase tracking-widest rounded-xl shadow-lg" style="background:var(--plug-dark);color:var(--theme-accent);border:1px solid var(--theme-border);cursor:pointer;">⚙️ Admin</button>
+  
+  <div id="dev-autofill-panel" class="hidden p-3 rounded-2xl shadow-2xl flex flex-col gap-2 mt-2" style="background:var(--plug-dark);border:1px solid var(--theme-border);backdrop-filter:blur(8px);width:220px;">
+    <span class="text-[9px] font-black uppercase tracking-widest text-center" style="color:var(--theme-accent)">Painel Admin / Testes</span>
+    <input type="password" id="admin-pass" placeholder="Senha admin" style="padding:0.5rem;font-size:0.8rem;margin-bottom:0.2rem;">
+    <button onclick="liberarAutofill()" class="px-2 py-1.5 text-xs font-bold rounded-xl" style="background:var(--theme-primary);color:#fff;border:none;cursor:pointer;">Entrar</button>
+    
+    <div id="autofill-actions" class="hidden flex flex-col gap-2 mt-2">
+      <button onclick="autoFillTest(0)" class="px-2 py-1.5 text-[11px] font-bold rounded-xl text-left" style="background:var(--theme-bg-soft);color:var(--plug-white);border:1px solid var(--theme-border);cursor:pointer;">� Tudo A (100pts)</button>
+      <button onclick="autoFillTest(1)" class="px-2 py-1.5 text-[11px] font-bold rounded-xl text-left" style="background:var(--theme-bg-soft);color:var(--plug-white);border:1px solid var(--theme-border);cursor:pointer;">⚖️ Tudo B (70pts)</button>
+      <button onclick="autoFillTest(2)" class="px-2 py-1.5 text-[11px] font-bold rounded-xl text-left" style="background:var(--theme-bg-soft);color:var(--plug-white);border:1px solid var(--theme-border);cursor:pointer;">� Tudo C (30pts)</button>
+    </div>
+  </div>
+</div>
+
 <div id="popup-autoconversao" class="fixed inset-0 z-50 flex items-center justify-center p-4" style="background:rgba(15,23,20,0.85);backdrop-filter:blur(6px);display:none;">
 <div class="card-main rounded-3xl p-6 md:p-8 max-w-md w-full relative text-center fade-up" style="background:var(--plug-dark)">
 <button onclick="fecharPopup()" class="absolute top-4 right-4 text-sm font-black p-2 rounded-xl" style="background:var(--plug-gray);color:var(--plug-white);cursor:pointer;border:none;">✕</button>
-<div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl" style="background:var(--theme-bg-soft);border:1px solid var(--theme-border)">✨</div>
-<h3 class="text-lg font-black uppercase tracking-tight mb-2" style="color:var(--plug-white)">Aproveite a Oportunidade Exclusiva</h3>
-<p style="color:var(--plug-muted);font-size:.85rem;line-height:1.6;margin-bottom:1.5rem">Garanta prioridade na agenda de diagnósticos e receba insights automatizados diretamente no seu WhatsApp ao finalizar.</p>
-<button onclick="fecharPopup()" class="w-full py-4 btn-action text-sm">QUERO PARTICIPAR →</button>
-</div></div>
-<div class="w-full" style="max-width:560px">
+<div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl" style="background:var(--theme-bg-soft);border:1px solid var(--theme-border)">⚙️</div>
+<h3 class="text-lg font-black uppercase tracking-tight mb-2" style="color:var(--plug-white)">Fase de Estruturação e Validação</h3>
+<p style="color:var(--plug-muted);font-size:.85rem;line-height:1.6;margin-bottom:1.5rem">Estamos na etapa de refinamento da nossa metodologia e validação de diagnósticos. Sua participação nesta fase piloto é fundamental para calibrar nossos padrões.</p>
+<button onclick="fecharPopup()" class="w-full py-4 btn-action text-sm">PARTICIPAR DA VALIDAÇÃO →</button>
+</div>
+</div>
+
+<div class="w-full" id="main-container" style="max-width:960px">
 <div class="card-main rounded-[2rem] overflow-hidden" style="background:var(--plug-dark); margin-top:2vh; margin-bottom:2vh;">
 <div class="flex justify-between items-center px-6 py-5" style="background:var(--plug-black);border-bottom:1px solid var(--plug-gray)">
 <div class="flex items-center gap-3"><span style="color:var(--plug-white);font-weight:900;font-size:1.15rem;letter-spacing:0.02em;">EHO — Effective Home Organizer</span></div>
 <button onclick="toggleTheme()" style="background:none;border:none;color:var(--plug-white);cursor:pointer;padding:5px;" title="Alternar Tema">
 <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-</button></div>
+</button>
+</div>
 <div class="relative overflow-hidden" style="background:var(--plug-black);padding:2rem 1.5rem 1.5rem">
-<div class="relative z-10"><h1 style="text-transform:uppercase;letter-spacing:-.02em;color:var(--plug-white);margin-bottom:.3rem;font-size:clamp(1.1rem,4.5vw,1.8rem);font-weight:900;line-height:1.2">Avalie se a sua residência é estruturada para o bem estar ou se precisa de Instrução Pontual, Método ou Curadoria Organizacional.</h1></div>
+<div class="relative z-10">
+<h1 style="text-transform:uppercase;letter-spacing:-.02em;color:var(--plug-white);margin-bottom:.3rem;font-size:clamp(1.1rem,4.5vw,1.8rem);font-weight:900;line-height:1.2">Descubra se a sua casa está realmente apoiando a rotina que você deseja ou se ela pode ganhar mais organização, leveza e praticidade com uma solução pensada para o seu dia a dia.</h1>
+</div>
 </div>
 <div class="fade-up" id="screen-intro" style="background:var(--plug-dark);padding:1.5rem">
-<p style="color:var(--plug-muted);margin-bottom:.75rem;font-size:.88rem;line-height:1.7">O ambiente em que você vive molda a sua qualidade de vida. Desde as compras até o fluxo de limpeza, a organização residencial é vital para sua saúde.</p>
-<p style="color:var(--plug-muted);margin-bottom:1.8rem;font-size:.88rem;line-height:1.7">Este diagnóstico avalia o nível de organização e eficiência da sua rotina através de <strong style="color:var(--plug-white)">10 perguntas estratégicas</strong> baseadas em nossa anamnese profissional.</p>
+<p style="color:var(--plug-muted);margin-bottom:.75rem;font-size:.88rem;line-height:1.7">O ambiente em que você vive molda diretamente a sua qualidade de vida e a sua energia diária.</p>
+<p style="color:var(--plug-muted);margin-bottom:1.8rem;font-size:.88rem;line-height:1.7">Este diagnóstico avalia o nível de organização e eficiência da sua rotina através de <strong style="color:var(--plug-white)">10 perguntas acolhedoras</strong> baseadas em nossa anamnese profissional.</p>
 <button class="w-full py-5 btn-action text-base shadow-xl flex items-center justify-center gap-2" onclick="startQuiz()" style="font-size:1rem">INICIAR DIAGNÓSTICO DE CORTESIA ›</button>
 </div>
 <div class="hidden p-8" id="screen-quiz">
 <div class="mb-7">
 <div class="flex justify-between items-end mb-2">
 <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg" id="pilar-name" style="color:var(--theme-accent);background:var(--theme-bg-soft)">Pilar</span>
-<span class="text-sm font-bold" id="quiz-percent" style="color:var(--theme-accent);opacity:.6">0%</span>
+<span class="text-sm font-bold" id="quiz-percent" style="color:var(--theme-accent);opacity:.8">0%</span>
 </div>
 <div class="w-full h-1.5 rounded-full" style="background:var(--plug-gray)"><div class="progress-bar h-full rounded-full" id="quiz-progress-bar" style="width:0%"></div></div>
 </div>
@@ -36,44 +108,589 @@
 <div class="mt-8 flex items-center justify-between">
 <button class="text-sm font-bold uppercase tracking-wider transition-colors invisible flex items-center gap-2" style="color:var(--plug-muted);cursor:pointer;background:0 0;border:none" id="btn-prev" onclick="prevQuestion()"><svg viewBox="0 0 24 24" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" width="16"><path d="m15 18-6-6 6-6"/></svg> Voltar</button>
 <button class="px-10 py-3.5 btn-action text-sm" disabled id="btn-next" onclick="nextQuestion()">PRÓXIMA →</button>
-</div></div>
+</div>
+</div>
 <div class="hidden p-8 text-center" id="screen-lead">
 <div class="mb-7">
-<div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl" style="background:var(--theme-bg-soft);border:1px solid var(--theme-border)">&#x1F510;</div>
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl" style="background:var(--theme-bg-soft);border:1px solid var(--theme-border)">�</div>
 <h2 class="text-xl font-black uppercase tracking-tight mb-2" style="color:var(--plug-white)">Mapeamento Concluído</h2>
 <div class="h-0.5 w-12 mx-auto my-4 rounded-full" style="background:var(--theme-primary)"></div>
-<p style="color:var(--plug-muted);font-size:.88rem;line-height:1.7">Preencha rapidamente para liberar o seu Nível de Organização e o raio-x detalhado das 10 áreas da sua residência.</p>
+<p style="color:var(--plug-muted);font-size:.88rem;line-height:1.7">Preencha rapidamente para liberar o seu Nível de Organização e as soluções personalizadas para a sua residência.</p>
 </div>
 <form class="flex flex-col gap-4 text-left" autocomplete="off" id="lead-form" onsubmit="generateResult(event)">
-<div><label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Seu nome</label><input placeholder="Como prefere ser chamado" autocomplete="off" id="input-nome" required></div>
-<div><label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">WhatsApp (com DDD)</label><input placeholder="11 99999-9999" autocomplete="off" id="input-whatsapp" required type="tel"></div>
-<div><label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Localização</label><select autocomplete="off" id="input-cidade" required><option disabled selected value="" data-penalty="0">Onde o imóvel está localizado?</option><option value="Sao Paulo" data-penalty="0">São Paulo</option><option value="Caieiras / Cajamar" data-penalty="2">Eixo (Perto de SP): Caieiras, Cajamar, etc.</option><option value="Jundiai / Itupeva" data-penalty="4">Eixo (Distância Média): Jundiaí, Itupeva, etc.</option><option value="Louveira / Vinhedo" data-penalty="3">Eixo (Perto de Campinas): Louveira, Vinhedo, etc.</option><option value="Campinas" data-penalty="1">Campinas</option><option value="Outras Cidades" data-penalty="5">Outra cidade ou estado</option></select></div>
-<div><label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Tipo de Imóvel</label><select autocomplete="off" id="input-imovel" required><option disabled selected value="">Selecione o tipo</option><option value="Apartamento Padrao">Apartamento Padrão</option><option value="Casa Padrao">Casa Padrão</option><option value="Cobertura / Alto Padrao">Casa de Alto Padrão / Cobertura</option><option value="Em fase de mudanca">Em fase de mudança/reforma</option></select></div>
-<div><label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Maior Desafio Atual</label><select autocomplete="off" id="input-desafio" required><option disabled selected value="">Qual o principal ponto de atrito?</option><option value="Alimentacao e Despensa">Desorganização de Alimentos e Despensa</option><option value="Limpeza e Manutencao">Dificuldade em manter a Limpeza e Higiene</option><option value="Falta de Tempo">Falta de Tempo / Dinâmica do Dia a Dia</option><option value="Falta de Integração">A residência não atende plenamente às necessidades da família</option></select></div>
+<div>
+<label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Seu nome</label>
+<input placeholder="Como prefere ser chamado" autocomplete="off" id="input-nome" required>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">WhatsApp (com DDD)</label>
+<input placeholder="11 99999-9999" autocomplete="off" id="input-whatsapp" required type="tel">
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Localização</label>
+<select autocomplete="off" id="input-cidade" required>
+<option disabled selected value="" data-penalty="0">Onde o imóvel está localizado?</option>
+<option value="Sao Paulo" data-penalty="0">São Paulo</option>
+<option value="Caieiras / Cajamar" data-penalty="2">Eixo (Perto de SP): Caieiras, Cajamar, etc.</option>
+<option value="Jundiai / Itupeva" data-penalty="4">Eixo (Distância Média): Jundiaí, Itupeva, etc.</option>
+<option value="Louveira / Vinhedo" data-penalty="3">Eixo (Perto de Campinas): Louveira, Vinhedo, etc.</option>
+<option value="Campinas" data-penalty="1">Campinas</option>
+<option value="Outras Cidades" data-penalty="5">Outra cidade ou estado</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Tipo de Imóvel</label>
+<select autocomplete="off" id="input-imovel" required>
+<option disabled selected value="">Selecione o tipo</option>
+<option value="Apartamento Padrao">Apartamento Padrão</option>
+<option value="Casa Padrao">Casa Padrão</option>
+<option value="Cobertura / Alto Padrao">Casa de Alto Padrão / Cobertura</option>
+<option value="Em fase de mudanca">Em fase de mudança/reforma</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase tracking-widest mb-2 ml-1" style="color:var(--plug-muted)">Maior Desafio Atual</label>
+<select autocomplete="off" id="input-desafio" required>
+<option disabled selected value="">Qual o principal ponto de atrito?</option>
+<option value="Alimentacao e Despensa">Desorganização de Alimentos e Despensa</option>
+<option value="Limpeza e Manutencao">Dificuldade em manter a Limpeza e Higiene</option>
+<option value="Falta de Tempo">Falta de Tempo / Dinâmica do Dia a Dia</option>
+<option value="Falta de Integração">A residência não atende plenamente às necessidades da família</option>
+</select>
+</div>
 <button class="w-full py-5 btn-action text-base mt-2 shadow-xl">VER MEU NÍVEL DE ORGANIZAÇÃO →</button>
-</form></div>
-<div style="text-align:center;padding:3.5rem 2rem;display:none" id="screen-loading"><div style="border:3px solid var(--plug-gray);border-top-color:var(--theme-accent);border-radius:50%;width:52px;height:52px;margin:0 auto 1.5rem;animation:.9s linear infinite spin"></div><p style="color:var(--theme-accent);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:900">Calculando seu nível de organização...</p></div>
-<div class="hidden p-8" id="screen-result">
-<div class="text-center mb-6">
-<p class="text-[10px] font-black uppercase tracking-[.2em] mb-5" style="color:var(--plug-muted)">Seu Nível de Organização Residencial</p>
+</form>
+</div>
+<div style="text-align:center;padding:3.5rem 2rem;display:none" id="screen-loading">
+<div style="border:3px solid var(--plug-gray);border-top-color:var(--theme-accent);border-radius:50%;width:52px;height:52px;margin:0 auto 1.5rem;animation:.9s linear infinite spin"></div>
+<p style="color:var(--theme-accent);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:900">Calculando seu nível de organização...</p>
+</div>
+
+<!-- TELA DE RESULTADO COM ANCORAGEM E TEXTOS CALIBRADOS -->
+<div class="hidden p-6 md:p-8" id="screen-result">
+<div class="text-center mb-6" id="topo-resultado">
+<p class="text-[10px] font-black uppercase tracking-[.2em] mb-4" style="color:var(--plug-muted)">Seu Nível de Organização Residencial</p>
 <div class="relative inline-flex items-center justify-center">
-<svg class="w-44 h-44" style="transform:rotate(-90deg)"><defs><linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%"><stop offset="0%" style="stop-color:#356859"/><stop offset="100%" style="stop-color:#5CB69C"/></linearGradient></defs><circle cx="88" cy="88" fill="none" r="76" style="stroke:var(--plug-gray)" stroke-width="10"/><circle cx="88" cy="88" fill="none" id="score-circle" r="76" stroke="url(#gradient)" stroke-dasharray="477" stroke-dashoffset="477" stroke-linecap="round" stroke-width="10"/></svg>
-<div class="absolute inset-0 flex flex-col items-center justify-center"><span class="text-5xl font-black" id="score-value" style="color:var(--theme-accent)">0</span><span class="text-[9px] font-black uppercase tracking-[.15em] mt-1" style="color:var(--theme-accent);opacity:.6">Pontos / 100</span></div>
-</div></div>
-<div class="mb-5 p-4 rounded-2xl text-center font-black uppercase tracking-tight text-base" id="result-status"></div>
-<div class="rounded-2xl p-6 mb-6 text-left" style="background:var(--plug-black);border:1px solid var(--plug-gray);">
-<h4 class="font-black text-[10px] uppercase tracking-widest mb-3 pb-2" style="color:var(--theme-accent);border-bottom:1px solid var(--plug-gray)">Classificação por Faixas de Desempenho</h4>
-<div class="flex flex-col gap-3 text-xs" style="color:var(--plug-muted); line-height:1.5;">
-<div id="faixa-1" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong style="color:var(--plug-white)">• 1 a 29 Pontos (Gargalos Críticos / Instrução Pontual):</strong> Necessidade de diretrizes imediatas e correção de pontos cegos operacionais.</div>
-<div id="faixa-2" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong style="color:var(--plug-white)">• 30 a 69 Pontos (Reestruturação / Método):</strong> Demanda implantação de processos padronizados na rotina do lar.</div>
-<div id="faixa-3" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent"><strong style="color:var(--plug-white)">• 70 a 100 Pontos (Alta Performance / Curadoria Organizacional):</strong> Estrutura sólida pronta para governança contínua via plataforma e curadoria.</div>
-</div></div>
-<div class="rounded-2xl p-6 mb-6" style="background:var(--plug-black);border:1px solid var(--plug-gray);"><h4 class="font-black text-[10px] uppercase tracking-widest mb-4 pb-2" style="color:var(--theme-accent);border-bottom:1px solid var(--plug-gray)">Raio-X Detalhado dos 10 Pilares</h4><div id="criterios-detalhados" class="flex flex-col gap-4 text-left" style="font-size:.85rem;line-height:1.6"></div></div>
-<div class="rounded-2xl p-6 mb-6" id="box-cta" style="background:linear-gradient(135deg, var(--plug-dark), var(--plug-black));border:1px solid var(--theme-border);">
-<p class="text-[10px] font-black uppercase tracking-widest mb-1" style="color:var(--theme-accent)">Solução Ideal Recomendada:</p>
-<h4 class="font-black text-base mb-2 leading-tight" style="color:var(--plug-white)" id="cta-title">&#x1F4AC; Falar com a EHO</h4>
-<p style="color:var(--plug-muted);margin-bottom:1.2rem;font-size:.82rem;line-height:1.65" id="cta-text">Com base na sua faixa, podemos alinhar a melhor solução.</p>
-<a class="btn-action flex items-center justify-center gap-3 w-full py-4 rounded-2xl font-black text-sm uppercase tracking-wider" href="#" id="cta-link" target="_blank" style="text-decoration:none"> AGENDAR AVALIAÇÃO COM A EHO </a>
-</div></div></div></div>
-<script>const LigarPopup=true;function checarPopupInicial(){if(LigarPopup){setTimeout(()=>{document.getElementById('popup-autoconversao').style.display='flex';},1200);}}function fecharPopup(){document.getElementById('popup-autoconversao').style.display='none';}window.onload=checarPopupInicial;const WEBHOOK_URL_PLANILHA='https://script.google.com/macros/s/AKfycbweeYiQCqdRHTy9M74HPr8ThK2aVcV61FMjHVmklNV3LNJGJQP88frqgw306Qqd7nOQGg/exec';const CIRCUMFERENCE=477;function toggleTheme(){document.body.classList.toggle('light-theme');}const questions=[{pilar:"Governança e Apoio Doméstico",question:"Como funciona a divisão e a delegação das tarefas diárias na sua residência?",options:[{txt:"Muito centralizada em mim ou confusa, gerando sobrecarga e retrabalho constante.",points:2,max:10,feedback:"Centralização excessiva: ausência de processos claros de delegação."},{txt:"Temos ajuda (funcionários/diarista ou família), mas exige supervisão e cobrança frequente.",points:6,max:10,feedback:"Dependência de supervisão: falta autonomia na equipe/família."},{txt:"A rotina é bem alinhada, com papéis definidos e funcionamento autônomo do lar.",points:10,max:10,feedback:"Excelente governança: rotina delegada com clareza e autonomia."}]},{pilar:"Despensa e Refrigeração",question:"Como está o controle de estoques e validades de alimentos na sua geladeira e despensa?",options:[{txt:"É comum encontrar itens vencidos ou esquecidos no fundo das prateleiras.",points:2,max:10,feedback:"Gargalo no armazenamento: falta de visibilidade e controle de prazos."},{txt:"Os itens estão guardados, mas falta padronização visual e setorização clara.",points:6,max:10,feedback:"Armazenamento básico: necessita de categorização por zonas."},{txt:"Tudo é categorizado, visível e com rotação de validade automatizada.",points:10,max:10,feedback:"Setorização perfeita: controle total contra desperdícios."}]},{pilar:"Fluxo Culinário e Higiene",question:"Como flui o processo de entrada, higienização de hortifrúti e preparo das refeições?",options:[{txt:"As compras demoram a ser guardadas e o preparo de refeições gera bagunça e desgaste.",points:2,max:10,feedback:"Atrito operacional: entrada de compras sem fluxo de assepsia definido."},{txt:"Procuramos higienizar, mas o processo na bancada/pia é lento e a cozinha fica pesada.",points:6,max:10,feedback:"Fluxo parcial: higienização ocorre com esforço e tempo elevado."},{txt:"Fluxo prático e ágil: compras entram limpas e a cozinha permanece funcional.",points:10,max:10,feedback:"Cozinha de alta performance: manipulação limpa e sem atritos."}]},{pilar:"Biossegurança e Saneantes",question:"Como é feito o armazenamento e manuseio dos produtos de limpeza na sua casa?",options:[{txt:"Ficam misturados ou acessíveis, sem controle rígido de diluição e segurança.",points:2,max:10,feedback:"Risco de biossegurança: produtos guardados sem categorização segura."},{txt:"Estão na área de serviço, mas faltam rótulos, dosadores ou separação por função.",points:6,max:10,feedback:"Armazenamento informal: necessita de padronização de diluição e uso."},{txt:"Setorizados com segurança, rotulagem adequada e longe de alimentos/pets.",points:10,max:10,feedback:"Biossegurança total: guarda preventiva e manuseio correto."}]},{pilar:"Ciclo de Lavanderia",question:"Como está o fluxo de roupas sujas, lavagem, passagem e guarda de rouparia?",options:[{txt:"Acumulam-se pilhas em diferentes etapas (esperando lavar, passar ou guardar).",points:2,max:10,feedback:"Gargalo no fluxo têxtil: retenção de peças em etapas do processo."},{txt:"As roupas são lavadas, mas a etapa de passar e guardar nos closets é demorada.",points:6,max:10,feedback:"Lentidão na finalização: falta de um fluxo contínuo de dobra e guarda."},{txt:"Ciclo contínuo e organizado: a roupa limpa retorna rapidamente ao closet.",points:10,max:10,feedback:"Gestão têxtil eficiente: lavanderia operando com ritmo fluido."}]},{pilar:"Áreas Sociais e Reset",question:"Ao final do dia, como ficam as superfícies da sala e áreas de convivência?",options:[{txt:"Acumulam-se objetos espalhados ('cantinhos da bagunça') que incomodam visualmente.",points:2,max:10,feedback:"Poluição visual recorrente: ausência do hábito de 'reset' diário do ambiente."},{txt:"A casa fica razoável, mas exige esforço constante no fim do dia para recolher itens.",points:6,max:10,feedback:"Manutenção manual pesada: falta de endereçamento fixo para os objetos."},{txt:"Tudo volta facilmente ao seu devido lugar e o ambiente se mantém harmônico.",points:10,max:10,feedback:"Ambiente equilibrado: endereçamento claro evita acúmulos de superfície."}]},{pilar:"Closets e Dormitórios",question:"Como você avalia a organização interna dos armários, gavetas e o espaço de descanso?",options:[{txt:"Armários cheios e sem categorização, dificultando encontrar roupas e gerando poluição visual.",points:2,max:10,feedback:"Sobrecarga nos closets: necessidade urgente de triagem e categorização."},{txt:"Está organizado por fora, mas as gavetas e cabides internamente são despadronizados.",points:6,max:10,feedback:"Organização superficial: necessita de colmeias e padronização interna."},{txt:"Excelente visualização interna, peças categorizadas e ambiente voltado ao descanso.",points:10,max:10,feedback:"Closet inteligente: suporte ao minimalismo prático e bem-estar."}]},{pilar:"Banheiros e Cosméticos",question:"Como estão organizados os cosméticos, maquiagens e itens de higiene pessoal?",options:[{txt:"Produtos misturados, com itens fora da validade ou embalagens acumuladas no lavabo.",points:2,max:10,feedback:"Descontrole em higiene: acúmulo de cosméticos e falta de descarte."},{txt:"Guardados em armários/gavetas, mas difíceis de visualizar no uso diário.",points:6,max:10,feedback:"Uso de espaço ineficiente: falta de organizadores e separação individual."},{txt:"Produtos setorizados por uso, validades em dia e superfícies sempre limpas.",points:10,max:10,feedback:"Assepsia e praticidade: bancadas livres e fácil acesso a itens pessoais."}]},{pilar:"Home Office e Papelada",question:"Como é gerida a papelada, documentos físicos, contas e o espaço de trabalho?",options:[{txt:"Papéis acumulados na mesa ou gavetas, sem arquivo definido e com fios emaranhados.",points:2,max:10,feedback:"Falta de gestão documental: atrito no ambiente de foco e produtividade."},{txt:"Guardamos os documentos, mas perde-se tempo buscando papéis específicos quando necessário.",points:6,max:10,feedback:"Arquivamento básico: falta método de triagem e digitalização."},{txt:"Mesa clean desk, documentos essenciais arquivados/digitalizados e sem acúmulos.",points:10,max:10,feedback:"Espaço produtivo otimizado: gestão física e digital estruturada."}]},{pilar:"Prontidão e Desejo",question:"Se você tivesse acesso a procedimentos claros, vídeos e suporte IA para manter a casa em ordem, qual seu formato ideal?",options:[{txt:"Preciso de Instrução Pontual direcionada para sanar pontos críticos e gargalos.",points:2,max:10,feedback:"Busca direcionamento rápido e cirúrgico (Foco em Instrução Pontual)."},{txt:"Quero implementar um Método estruturado de melhoria por etapas na rotina.",points:6,max:10,feedback:"Busca estruturação metódica e processos passo a passo (Foco em Método)."},{txt:"Desejo acesso contínuo à plataforma, tutoriais e Curadoria Organizacional.",points:10,max:10,feedback:"Alta afinidade com recorrência, IA e governança contínua."}]}];let currentStep=0,userScores=[];function startQuiz(){currentStep=0;userScores=[];document.getElementById('screen-intro').classList.add('hidden');document.getElementById('screen-quiz').classList.remove('hidden');renderQuestion();}function renderQuestion(){let q=questions[currentStep],pct=Math.round((currentStep+1)/questions.length*100);document.getElementById('question-text').innerText=q.question;document.getElementById('pilar-name').innerText=q.pilar;document.getElementById('quiz-percent').innerText=pct+'%';document.getElementById('quiz-progress-bar').style.width=pct+'%';let container=document.getElementById('options-container');container.innerHTML='';q.options.forEach((opt,i)=>{let div=document.createElement('div');div.className='option-card p-4 md:p-5';div.style.fontSize='.88rem';div.innerText=opt.txt;if(userScores[currentStep]&&userScores[currentStep].index===i)div.classList.add('option-selected');div.onclick=()=>selectOption(i,opt.points,opt.max,opt.feedback,q.pilar,q.question,opt.txt);container.appendChild(div);});document.getElementById('btn-prev').style.visibility=currentStep===0?'hidden':'visible';document.getElementById('btn-next').disabled=userScores[currentStep]===undefined;}function selectOption(i,points,max,feedback,pilar,question,answerText){userScores[currentStep]={index:i,points,max,feedback,pilar,question,answerText};renderQuestion();setTimeout(nextQuestion,350);}function nextQuestion(){if(currentStep<questions.length-1){currentStep++;renderQuestion();}else{document.getElementById('screen-quiz').classList.add('hidden');document.getElementById('screen-lead').classList.remove('hidden');}}function prevQuestion(){if(currentStep>0){currentStep--;renderQuestion();}}function generateResult(e){e.preventDefault();let nome=document.getElementById('input-nome').value.trim();let whatsapp=document.getElementById('input-whatsapp').value.trim();let cidadeEl=document.getElementById('input-cidade');let cidade=cidadeEl.value;let penaltyGeo=parseInt(cidadeEl.options[cidadeEl.selectedIndex].getAttribute('data-penalty')||"0",10);if(whatsapp.replace(/\D/g,'').length<10){alert('WhatsApp inválido.');return;}document.getElementById('screen-lead').classList.add('hidden');document.getElementById('screen-loading').style.display='block';let rawScore=userScores.reduce((acc,cur)=>acc+cur.points,0);let totalScore=Math.max(1,Math.min(100,rawScore-penaltyGeo));let msgWpp=encodeURIComponent(`Olá! Me chamo ${nome}, fiz o diagnóstico EHO e meu nível foi ${totalScore}/100.`);let linkWpp=`https://wa.me/5511911595028?text=${msgWpp}`;setTimeout(()=>{document.getElementById('screen-loading').style.display='none';document.getElementById('screen-result').classList.remove('hidden');document.getElementById('score-value').innerText='0';animateScore(totalScore);let statusEl=document.getElementById('result-status');let criteriosEl=document.getElementById('criterios-detalhados');document.getElementById('faixa-1').style.borderColor=(totalScore>=1&&totalScore<=29)?'var(--theme-accent)':'transparent';document.getElementById('faixa-2').style.borderColor=(totalScore>=30&&totalScore<=69)?'var(--theme-accent)':'transparent';document.getElementById('faixa-3').style.borderColor=(totalScore>=70&&totalScore<=100)?'var(--theme-accent)':'transparent';criteriosEl.innerHTML='';userScores.forEach(item=>{let divItem=document.createElement('div');divItem.style.cssText="background:var(--plug-dark);border:1px solid var(--plug-gray);border-radius:12px;padding:1rem;";divItem.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem"><strong style="color:var(--plug-white);font-size:.9rem">&#x1F4CC; ${item.pilar}</strong><span style="font-size:.7rem;font-weight:900;background:var(--theme-bg-soft);color:var(--theme-accent);padding:.2rem .6rem;border-radius:6px">${item.points} / ${item.max} pts</span></div><p style="color:var(--plug-white);font-weight:600;font-size:.84rem;margin-bottom:.3rem;line-height:1.4">P: ${item.question}</p><p style="color:var(--theme-accent);font-size:.82rem;margin-bottom:.5rem;line-height:1.4">R: "${item.answerText}"</p><p style="color:var(--plug-muted);font-size:.8rem;line-height:1.4;border-top:1px solid var(--plug-gray);padding-top:.4rem"><strong>Análise:</strong> ${item.feedback}</p>`;criteriosEl.appendChild(divItem);});if(penaltyGeo>0){let divPenalidade=document.createElement('div');divPenalidade.style.cssText="background:var(--plug-dark);border:1px solid var(--plug-gray);border-radius:12px;padding:1rem;";divPenalidade.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.35rem"><strong style="color:var(--plug-white);font-size:.9rem">&#x1F4CD; Localização (${cidade})</strong><span style="font-size:.7rem;font-weight:900;background:var(--theme-bg-soft);color:var(--theme-accent);padding:.2rem .6rem;border-radius:6px">-${penaltyGeo} pts</span></div><p style="color:var(--plug-muted);font-size:.82rem;line-height:1.5">Ajuste logístico regional para ponderação de viabilidade de atendimento.</p>`;criteriosEl.appendChild(divPenalidade);}let btnCtaLink=document.getElementById('cta-link');if(totalScore>=1&&totalScore<=29){statusEl.innerText="Foco em Instrução Pontual";statusEl.style.color="var(--theme-accent)";statusEl.style.background="var(--theme-bg-soft)";document.getElementById('cta-title').innerText="Solicitar Instrução Pontual";document.getElementById('cta-text').innerText="Sua residência apresenta gargalos críticos. Solicite instruções direcionadas para sanar pontos cegos operacionais.";btnCtaLink.innerText="SOLICITAR INSTRUÇÃO PONTUAL →";btnCtaLink.href=linkWpp+encodeURIComponent("&interesse=Instrucao_Pontual");}else if(totalScore>=30&&totalScore<=69){statusEl.innerText="Foco em Método Aplicado";statusEl.style.color="var(--theme-accent)";statusEl.style.background="var(--theme-bg-soft)";document.getElementById('cta-title').innerText="Solicitar Acesso ao Método";document.getElementById('cta-text').innerText="Ideal para implantar fluxos definitivos e padronizados de organização e processos na rotina da sua casa.";btnCtaLink.innerText="SOLICITAR ACESSO AO MÉTODO →";btnCtaLink.href=linkWpp+encodeURIComponent("&interesse=Metodo_Aplicado");}else{statusEl.innerText="Foco em Curadoria Organizacional";statusEl.style.color="var(--theme-accent)";statusEl.style.background="var(--theme-bg-soft)";document.getElementById('cta-title').innerText="Solicitar Anamnese e Curadoria";document.getElementById('cta-text').innerText="Sua casa possui excelente estrutura. Solicite anamnese para iniciar o acesso à plataforma e curadoria contínua.";btnCtaLink.innerText="SOLICITAR ANAMNESE E CURADORIA →";btnCtaLink.href=linkWpp+encodeURIComponent("&interesse=Curadoria_Organizacional");}},1000);}function animateScore(target){let current=0;let interval=setInterval(()=>{if(current>=target){current=target;clearInterval(interval);}document.getElementById('score-value').innerText=current;let offset=CIRCUMFERENCE-(current/100)*CIRCUMFERENCE;document.getElementById('score-circle').style.strokeDashoffset=offset;current++;},15);}</script>
-</body></html>
+<svg class="w-40 h-40" style="transform:rotate(-90deg)">
+<defs>
+<linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#356859"/>
+<stop offset="100%" style="stop-color:#5CB69C"/>
+</linearGradient>
+</defs>
+<circle cx="80" cy="80" fill="none" r="68" style="stroke:var(--plug-gray)" stroke-width="9"/>
+<circle cx="80" cy="80" fill="none" id="score-circle" r="68" stroke="url(#gradient)" stroke-dasharray="427" stroke-dashoffset="427" stroke-linecap="round" stroke-width="9"/>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-4xl font-black" id="score-value" style="color:var(--theme-accent)">0</span>
+<span class="text-[9px] font-black uppercase tracking-[.15em] mt-1" style="color:var(--theme-accent);opacity:.9">Pontos / 100</span>
+</div>
+</div>
+</div>
+
+<div class="mb-6 p-5 rounded-2xl text-center font-bold text-sm md:text-base shadow-sm leading-relaxed" id="result-status" style="background:var(--theme-bg-soft);color:var(--plug-white);border:1px solid var(--theme-border);"></div>
+
+<!-- MENU DE NAVEGAÇÃO ENTRE DETALHES E SERVIÇOS (COM ANCORAGEM) -->
+<div class="grid grid-cols-2 gap-3 mb-6">
+  <button onclick="mudarAba('detalhes')" id="btn-tab-detalhes" class="py-3 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all" style="background:var(--theme-bg-soft);color:var(--theme-accent);border:1px solid var(--theme-border);cursor:pointer;">� Ver Detalhes</button>
+  <button onclick="mudarAba('servicos')" id="btn-tab-servicos" class="py-3 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all" style="background:var(--plug-black);color:var(--plug-muted);border:1px solid var(--plug-gray);cursor:pointer;">� Ver Serviços</button>
+</div>
+
+<!-- SEÇÃO 1: DETALHES (RELATÓRIO PRELIMINAR) -->
+<div id="secao-detalhes" class="fade-up">
+  <div class="rounded-2xl p-5 mb-4" style="background:var(--plug-black);border:1px solid var(--plug-gray);">
+    <h4 class="font-black text-[10px] uppercase tracking-widest mb-3 pb-2" style="color:var(--theme-accent);border-bottom:1px solid var(--plug-gray)">Classificação por Faixas de Desempenho</h4>
+    <div class="flex flex-col gap-2.5 text-xs" style="color:var(--plug-white); line-height:1.5;">
+      <div id="faixa-1" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent">
+        <strong>• 0 a 64 Pontos (Ajustes de Rotina):</strong> Pontos de atrito pontuais que exigem interação rápida.
+      </div>
+      <div id="faixa-2" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent">
+        <strong>• 65 a 84 Pontos (Casa em Ordem):</strong> Demanda estruturação de fluxos para que a rotina funcione com leveza.
+      </div>
+      <div id="faixa-3" class="p-3 rounded-xl" style="background:var(--plug-dark); border:1px solid transparent">
+        <strong>• 85 a 100 Pontos (Experiência Exclusiva):</strong> Sobrecarga acentuada que exige aprofundamento estrutural e personalizado.
+      </div>
+    </div>
+  </div>
+
+  <div class="rounded-2xl p-5 mb-4" style="background:var(--plug-black);border:1px solid var(--plug-gray);">
+    <h4 class="font-black text-[10px] uppercase tracking-widest mb-4 pb-2" style="color:var(--theme-accent);border-bottom:1px solid var(--plug-gray)">Relatório preliminar das 10 áreas</h4>
+    <div id="criterios-detalhados" class="flex flex-col gap-3 text-left" style="font-size:.85rem;line-height:1.6"></div>
+  </div>
+
+  <button onclick="mudarAba('servicos')" class="w-full py-4 btn-action text-sm font-black uppercase tracking-wider">AVANÇAR PARA VER OS SERVIÇOS →</button>
+</div>
+
+<!-- SEÇÃO 2: SERVIÇOS (GRID LADO A LADO COM DESTAQUE FORTALECIDO) -->
+<div id="secao-servicos" class="hidden fade-up flex flex-col gap-4">
+  <div class="mb-2 text-left">
+    <h4 class="font-black text-[10px] uppercase tracking-widest pb-2" style="color:var(--theme-accent);border-bottom:1px solid var(--plug-gray)">Formatos de Solução Disponíveis</h4>
+  </div>
+
+  <!-- GRID RESPONSIVO: 1 COLUNA NO MOBILE, 3 COLUNAS LADO A LADO NO DESKTOP -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+    
+    <!-- Card 1 -->
+    <div id="card-servico-1" class="rounded-2xl p-5 text-left flex flex-col justify-between transition-all" style="background:var(--plug-black);border:1.5px solid var(--plug-gray);">
+      <div>
+        <div class="flex flex-col gap-1 mb-3">
+          <span id="badge-rec-1" class="hidden text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded text-center shadow-md mb-1" style="background:var(--theme-accent);color:var(--plug-black);letter-spacing:0.05em;">⭐ Recomendado para o seu perfil</span>
+          <span class="font-black text-sm" style="color:var(--plug-white)">1. Ajustes de Rotina</span>
+        </div>
+        <p style="color:var(--plug-white);font-size:.82rem;line-height:1.5;margin-bottom:0.6rem"><strong>Descrição:</strong> Focamos no que mais trava e no que mais preocupa no seu dia a dia agora. Resolvemos situações imediatas que exigem atenção urgente.</p>
+        <p style="color:var(--plug-muted);font-size:.78rem;margin-bottom:0.4rem"><strong>Ideal para:</strong> Quem quer resolver pontos específicos e ganhar fôlego rapidamente.</p>
+        <p style="color:var(--plug-muted);font-size:.78rem;margin-bottom:1rem"><strong>Entrega:</strong> Sessão pontual focada no levantamento da situação, processamento da solução e entrega do procedimento + Acesso à plataforma por 30 dias com os procedimentos para consulta.</p>
+      </div>
+      <button onclick="selecionarServico('Ajustes de Rotina (Sessões Pontuais)')" class="w-full py-3 btn-action text-xs font-black uppercase tracking-wider">SOLICITAR ESTE FORMATO →</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div id="card-servico-2" class="rounded-2xl p-5 text-left flex flex-col justify-between transition-all" style="background:var(--plug-black);border:1.5px solid var(--plug-gray);">
+      <div>
+        <div class="flex flex-col gap-1 mb-3">
+          <span id="badge-rec-2" class="hidden text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded text-center shadow-md mb-1" style="background:var(--theme-accent);color:var(--plug-black);letter-spacing:0.05em;">⭐ Recomendado para o seu perfil</span>
+          <span class="font-black text-sm" style="color:var(--plug-white)">2. Casa em Ordem</span>
+        </div>
+        <p style="color:var(--plug-white);font-size:.82rem;line-height:1.5;margin-bottom:0.6rem"><strong>Descrição:</strong> Estruturamos os espaços para que a casa seja funcional. Criamos fluxos e rotinas onde cada item tem seu lugar, tornando a manutenção mais simples para todos que moram na casa.</p>
+        <p style="color:var(--plug-muted);font-size:.78rem;margin-bottom:0.4rem"><strong>Ideal para:</strong> Quem sente que a casa está pesada e precisa de um sistema de organização duradouro.</p>
+        <p style="color:var(--plug-muted);font-size:.78rem;margin-bottom:1rem"><strong>Entrega:</strong> 12 horas de assessoria para mapeamento, implantação de fluxos e estruturação de rotinas + Acesso à plataforma por 60 dias com os procedimentos desenvolvidos para suporte à rotina.</p>
+      </div>
+      <button onclick="selecionarServico('Casa em Ordem (Assessoria Estrutural)')" class="w-full py-3 btn-action text-xs font-black uppercase tracking-wider">SOLICITAR ESTE FORMATO →</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div id="card-servico-3" class="rounded-2xl p-5 text-left flex flex-col justify-between transition-all" style="background:var(--plug-black);border:1.5px solid var(--plug-gray);">
+      <div>
+        <div class="flex flex-col gap-1 mb-3">
+          <span id="badge-rec-3" class="hidden text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded text-center shadow-md mb-1" style="background:var(--theme-accent);color:var(--plug-black);letter-spacing:0.05em;">⭐ Recomendado para o seu perfil</span>
+          <span class="font-black text-sm" style="color:var(--plug-white)">3. Experiência Residencial Exclusiva</span>
+        </div>
+        <p style="color:var(--plug-white);font-size:.82rem;line-height:1.5;margin-bottom:0.6rem"><strong>Descrição:</strong> Um diagnóstico profundo para avaliar a estrutura de setores, cômodos e rotinas. É a solução para quem deseja uma casa que apoie 100% seu estilo de vida, com total fluidez e conforto.</p>
+        <p style="color:var(--plug-muted);font-size:.78rem;margin-bottom:0.4rem"><strong>Ideal para:</strong> Quem deseja transformar a casa em um suporte real para o próprio bem-estar e o da família.</p>
+        <p style="color:var(--plug-muted);font-size:.78rem;margin-bottom:1rem"><strong>Entrega:</strong> 24 horas de assessoria dedicada com modelagem completa de setores e rotinas + Acesso à plataforma por 90 dias, contemplando o catálogo de procedimentos para acompanhamento.</p>
+      </div>
+      <button onclick="selecionarServico('Experiência Residencial Exclusiva')" class="w-full py-3 btn-action text-xs font-black uppercase tracking-wider">SOLICITAR ESTE FORMATO →</button>
+    </div>
+
+  </div>
+
+  <div class="mt-2 text-left">
+    <button onclick="mudarAba('detalhes')" class="py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider" style="background:none;border:1px solid var(--plug-gray);color:var(--plug-muted);cursor:pointer;">← Voltar para os Detalhes do Relatório</button>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<script>
+const SENHA_ADMIN = "admin123";
+let globalLeadData = {};
+let servicoRecomendadoGlobal = "";
+
+function toggleAdminPanel() {
+  let panel = document.getElementById('dev-autofill-panel');
+  panel.classList.toggle('hidden');
+}
+
+function liberarAutofill() {
+  let digitada = document.getElementById('admin-pass').value;
+  if(digitada === SENHA_ADMIN) {
+    document.getElementById('autofill-actions').classList.remove('hidden');
+    alert('Painel liberado com sucesso!');
+  } else {
+    alert('Senha incorreta.');
+  }
+}
+
+// CONTROLE DE ABAS COM ANCORAGEM AUTOMÁTICA
+function mudarAba(aba) {
+  let secDetalhes = document.getElementById('secao-detalhes');
+  let secServicos = document.getElementById('secao-servicos');
+  let btnDetalhes = document.getElementById('btn-tab-detalhes');
+  let btnServicos = document.getElementById('btn-tab-servicos');
+
+  if(aba === 'detalhes') {
+    secDetalhes.classList.remove('hidden');
+    secServicos.classList.add('hidden');
+    
+    btnDetalhes.style.background = 'var(--theme-bg-soft)';
+    btnDetalhes.style.color = 'var(--theme-accent)';
+    btnDetalhes.style.borderColor = 'var(--theme-border)';
+
+    btnServicos.style.background = 'var(--plug-black)';
+    btnServicos.style.color = 'var(--plug-muted)';
+    btnServicos.style.borderColor = 'var(--plug-gray)';
+  } else {
+    secDetalhes.classList.add('hidden');
+    secServicos.classList.remove('hidden');
+    
+    btnServicos.style.background = 'var(--theme-bg-soft)';
+    btnServicos.style.color = 'var(--theme-accent)';
+    btnServicos.style.borderColor = 'var(--theme-border)';
+
+    btnDetalhes.style.background = 'var(--plug-black)';
+    btnDetalhes.style.color = 'var(--plug-muted)';
+    btnDetalhes.style.borderColor = 'var(--plug-gray)';
+  }
+  
+  // ANCORAGEM INTELIGENTE: Leva o foco exatamente para o topo do resultado
+  document.getElementById('topo-resultado').scrollIntoView({ behavior: 'smooth' });
+}
+
+const LigarPopup = true;
+
+function checarPopupInicial() {
+  if (LigarPopup) {
+    setTimeout(() => {
+      document.getElementById('popup-autoconversao').style.display = 'flex';
+    }, 1200);
+  }
+}
+
+function fecharPopup() {
+  document.getElementById('popup-autoconversao').style.display = 'none';
+}
+
+window.onload = checarPopupInicial;
+
+const WEBHOOK_URL_PLANILHA='https://script.google.com/macros/s/AKfycbweeYiQCqdRHTy9M74HPr8ThK2aVcV61FMjHVmklNV3LNJGJQP88frqgw306Qqd7nOQGg/exec';
+const CIRCUMFERENCE=427;
+
+function toggleTheme(){
+  document.body.classList.toggle('light-theme');
+}
+
+const questions=[
+  {
+    pilar: "Configuração de Moradia",
+    question: "Como é a configuração da sua residência no dia a dia?",
+    options: [
+      { txt: "Moro em um ambiente compartilhado onde a responsabilidade e a bagunça causam forte estresse no meu dia a dia.", points: 10, max: 10, feedback: "Sobrecarga habitacional severa: ambiente gerador de alto estresse cotidiano." },
+      { txt: "Moro com outras pessoas, a convivência é ok, mas sinto que falta organização e padrão nos espaços.", points: 7, max: 10, feedback: "Convivência com atritos moderados: necessidade de padronização espacial." },
+      { txt: "Moro com facilidade de alinhamento e a rotina da casa flui de forma organizada e tranquila.", points: 3, max: 10, feedback: "Rotina equilibrada: ambiente harmonioso e sem urgência crítica." }
+    ]
+  },
+  {
+    pilar: "Apoio e Cuidados com a Casa",
+    question: "Como você lida com a divisão e a execução das tarefas da casa no dia a dia?",
+    options: [
+      { txt: "Fico praticamente responsável por tudo e me sinto totalmente sobrecarregado(a) e esgotado(a).", points: 10, max: 10, feedback: "Esgotamento operacional máximo: centralização absoluta das demandas." },
+      { txt: "Há divisão de tarefas, mas a responsabilidade mental de gerenciar tudo recai sobre mim, o que me gera muito desgaste.", points: 7, max: 10, feedback: "Carga mental elevada: gestão exclusiva recaindo sobre uma única pessoa." },
+      { txt: "As tarefas são bem divididas e a rotina flui de forma leve e equilibrada.", points: 3, max: 10, feedback: "Equilíbrio na delegação: tarefas e responsabilidades bem distribuídas." }
+    ]
+  },
+  {
+    pilar: "Alimentos e Despensa",
+    question: "Como você lida com a organização da sua geladeira e despensa no dia a dia?",
+    options: [
+      { txt: "Perco tempo e dinheiro porque frequentemente acho itens vencidos ou esquecidos, gerando muito desperdício e frustração.", points: 10, max: 10, feedback: "Prejuízo recorrente: perda financeira e de tempo por falta de controle de prazos." },
+      { txt: "Meus mantimentos estão guardados, mas falta padronização e facilidade para visualizar o que tenho, o que me atrapalha na rotina.", points: 7, max: 10, feedback: "Armazenamento sem visibilidade: fluxo de mantimentos prejudicado." },
+      { txt: "Tudo está bem organizado, categorizado e com excelente controle, sem nenhuma dor de cabeça nessa área.", points: 3, max: 10, feedback: "Despensa otimizada: controle absoluto e sem desperdícios." }
+    ]
+  },
+  {
+    pilar: "Fluxo Culinário e Higiene",
+    question: "Como costuma ser a sua rotina de compras, higienização dos alimentos e preparo das refeições?",
+    options: [
+      { txt: "Esse processo é caótico, demorado e me causa um desgaste físico e mental enorme toda vez que preciso cozinhar.", points: 10, max: 10, feedback: "Atrito culinário severo: manipulação de alimentos gerando exaustão." },
+      { txt: "Funciona, mas é cansativo e toma mais tempo do que eu gostaria no meu dia a dia corrido.", points: 7, max: 10, feedback: "Processo ineficiente: consumo excessivo de tempo na rotina da cozinha." },
+      { txt: "A rotina de cozinha é extremamente prática, ágil e bem resolvida.", points: 3, max: 10, feedback: "Cozinha fluida: manipulação limpa, ágil e sem atrito operacional." }
+    ]
+  },
+  {
+    pilar: "Biossegurança e Saneantes",
+    question: "Como é feito o armazenamento e manuseio dos produtos de limpeza na sua casa?",
+    options: [
+      { txt: "Ficam misturados ou acessíveis, sem controle rígido de diluição e segurança.", points: 10, max: 10, feedback: "Risco de biossegurança: guarda inadequada de saneantes." },
+      { txt: "Estão na área de serviço, mas faltam rótulos, dosadores ou separação por função.", points: 7, max: 10, feedback: "Organização informal de produtos: exige padronização de uso." },
+      { txt: "Setorizados com segurança, rotulagem adequada e longe de alimentos/pets.", points: 3, max: 10, feedback: "Biossegurança controlada: armazenamento seguro e normatizado." }
+    ]
+  },
+  {
+    pilar: "Ciclo de Lavanderia",
+    question: "Como está o fluxo de roupas sujas, lavagem, passagem e guarda de rouparia?",
+    options: [
+      { txt: "Acumulam-se pilhas em diferentes etapas (esperando lavar, passar ou guardar).", points: 10, max: 10, feedback: "Retenção têxtil crítica: gargalos em múltiplas etapas do ciclo." },
+      { txt: "As roupas são lavadas, mas a etapa de passar e guardar nos closets é demorada.", points: 7, max: 10, feedback: "Lentidão na finalização de roupas: acúmulo na fase de closets." },
+      { txt: "Ciclo contínuo e organizado: a roupa limpa retorna rapidamente ao closet.", points: 3, max: 10, feedback: "Gestão têxtil exemplar: lavanderia operando com ritmo contínuo." }
+    ]
+  },
+  {
+    pilar: "Áreas Sociais e Reset",
+    question: "Ao final do dia, como ficam as superfícies da sala e áreas de convivência?",
+    options: [
+      { txt: "Acumulam-se objetos espalhados ('cantinhos da bagunça') que incomodam visualmente.", points: 10, max: 10, feedback: "Poluição visual crônica: ausência de endereçamento e reset diário." },
+      { txt: "A casa fica razoável, mas exige esforço constante no fim do dia para recolher itens.", points: 7, max: 10, feedback: "Manutenção manual exaustiva: dependência de esforço diário pesado." },
+      { txt: "Tudo volta facilmente ao seu devido lugar e o ambiente se mantém harmônico.", points: 3, max: 10, feedback: "Ambiente estável: superfícies livres e organização sustentável." }
+    ]
+  },
+  {
+    pilar: "Closets e Dormitórios",
+    question: "Como você avalia a organização interna dos armários, gavetas e o espaço de descanso?",
+    options: [
+      { txt: "Armários cheios e sem categorização, dificultando encontrar roupas e gerando poluição visual.", points: 10, max: 10, feedback: "Closet colapsado: excesso de itens sem triagem ou método." },
+      { txt: "Está organizado por externo, mas as gavetas e cabides internamente são despadronizados.", points: 7, max: 10, feedback: "Organização superficial: necessita de padronização interna avançada." },
+      { txt: "Excelente visualização interna, peças categorizadas e ambiente voltado ao descanso.", points: 3, max: 10, feedback: "Dormitórios estruturados: apoio adequado ao descanso e clareza visual." }
+    ]
+  },
+  {
+    pilar: "Banheiros e Cosméticos",
+    question: "Como estão organizados os cosméticos, maquiagens e itens de higiene pessoal?",
+    options: [
+      { txt: "Produtos misturados, com itens fora da validade ou embalagens acumuladas no lavabo.", points: 10, max: 10, feedback: "Acúmulo e validade vencida: descontrole em itens de uso pessoal." },
+      { txt: "Guardados em armários/gavetas, mas difíceis de visualizar no uso diário.", points: 7, max: 10, feedback: "Espaço subutilizado: dificuldade de acesso rápido no dia a dia." },
+      { txt: "Produtos setorizados por uso, validades em dia e superfícies sempre limpas.", points: 3, max: 10, feedback: "Higiene organizada: bancadas livres e controle sanitário em dia." }
+    ]
+  },
+  {
+    pilar: "Prontidão e Desejo",
+    question: "Qual o formato ideal de suporte que você busca para manter a sua residência organizada?",
+    options: [
+      { txt: "Preciso de intervenção imediata e acompanhamento direto para sanar pontos críticos e gargalos urgentes.", points: 10, max: 10, feedback: "Alta urgência por suporte direcionado e consultoria dedicada." },
+      { txt: "Quero implementar um sistema estruturado de melhoria por etapas na rotina da minha casa.", points: 7, max: 10, feedback: "Demanda processos estruturados e programas guiados por etapas." },
+      { txt: "Desejo apenas referências pontuais ou autonomia para gerir o dia a dia por conta própria.", points: 3, max: 10, feedback: "Busca autonomia sem necessidade de intervenção externa robusta." }
+    ]
+  }
+];
+
+let currentStep=0,userScores=[];
+
+function autoFillTest(optionIndex) {
+  userScores = questions.map(q => {
+    let opt = q.options[optionIndex];
+    return {
+      index: optionIndex,
+      points: opt.points,
+      max: opt.max,
+      feedback: opt.feedback,
+      pilar: q.pilar,
+      question: q.question,
+      answerText: opt.txt
+    };
+  });
+  document.getElementById('screen-intro').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-lead').classList.remove('hidden');
+  
+  document.getElementById('input-nome').value = "Usuário Teste Autofill";
+  document.getElementById('input-whatsapp').value = "11999999999";
+  document.getElementById('input-cidade').value = "Sao Paulo";
+  document.getElementById('input-imovel').value = "Casa Padrao";
+  document.getElementById('input-desafio').value = "Falta de Tempo";
+}
+
+function startQuiz(){
+  currentStep=0;
+  userScores=[];
+  document.getElementById('screen-intro').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  renderQuestion();
+}
+
+function renderQuestion(){
+  let q=questions[currentStep],pct=Math.round((currentStep+1)/questions.length*100);
+  document.getElementById('question-text').innerText=q.question;
+  document.getElementById('pilar-name').innerText=q.pilar;
+  document.getElementById('quiz-percent').innerText=pct+'%';
+  document.getElementById('quiz-progress-bar').style.width=pct+'%';
+  let container=document.getElementById('options-container');
+  container.innerHTML='';
+  q.options.forEach((opt,i)=>{
+    let div=document.createElement('div');
+    div.className='option-card p-4 md:p-5';
+    div.style.fontSize='.88rem';
+    div.innerText=opt.txt;
+    if(userScores[currentStep]&&userScores[currentStep].index===i)div.classList.add('option-selected');
+    div.onclick=()=>selectOption(i,opt.points,opt.max,opt.feedback,q.pilar,q.question,opt.txt);
+    container.appendChild(div);
+  });
+  document.getElementById('btn-prev').style.visibility=currentStep===0?'hidden':'visible';
+  document.getElementById('btn-next').disabled=userScores[currentStep]===undefined;
+}
+
+function selectOption(i,points,max,feedback,pilar,question,answerText){
+  userScores[currentStep]={index:i,points,max,feedback,pilar,question,answerText};
+  renderQuestion();
+  setTimeout(nextQuestion,350);
+}
+
+function nextQuestion(){
+  if(currentStep<questions.length-1){
+    currentStep++;
+    renderQuestion();
+  }else{
+    document.getElementById('screen-quiz').classList.add('hidden');
+    document.getElementById('screen-lead').classList.remove('hidden');
+  }
+}
+
+function prevQuestion(){
+  if(currentStep>0){
+    currentStep--;
+    renderQuestion();
+  }
+}
+
+function generateResult(e){
+  e.preventDefault();
+  let nome=document.getElementById('input-nome').value.trim();
+  let whatsapp=document.getElementById('input-whatsapp').value.trim();
+  let cidadeEl=document.getElementById('input-cidade');
+  let cidade=cidadeEl.value;
+  let penaltyGeo=parseInt(cidadeEl.options[cidadeEl.selectedIndex].getAttribute('data-penalty')||"0",10);
+  let imovel=document.getElementById('input-imovel').value;
+  let desafio=document.getElementById('input-desafio').value;
+  
+  if(whatsapp.replace(/\D/g,'').length<10){
+    alert('WhatsApp inválido.');
+    return;
+  }
+  
+  document.getElementById('screen-lead').classList.add('hidden');
+  document.getElementById('screen-loading').style.display='block';
+  
+  let rawScore = userScores.reduce((acc,cur) => acc + cur.points, 0);
+  let totalScore = Math.max(1, Math.min(100, rawScore - penaltyGeo));
+  
+  globalLeadData = {
+    nome: nome,
+    whatsapp: whatsapp,
+    cidade: cidade,
+    imovel: imovel,
+    desafio: desafio,
+    scoreTotal: totalScore,
+    respostas: userScores.map(u => ({pilar: u.pilar, pergunta: u.question, pontos: u.points, resposta: u.answerText}))
+  };
+
+  setTimeout(()=>{
+    document.getElementById('screen-loading').style.display='none';
+    document.getElementById('screen-result').classList.remove('hidden');
+    document.getElementById('score-value').innerText='0';
+    animateScore(totalScore);
+    
+    let statusEl=document.getElementById('result-status');
+    let criteriosEl=document.getElementById('criterios-detalhados');
+    
+    // Reseta destaques anteriores
+    document.getElementById('badge-rec-1').classList.add('hidden');
+    document.getElementById('badge-rec-2').classList.add('hidden');
+    document.getElementById('badge-rec-3').classList.add('hidden');
+    
+    let card1 = document.getElementById('card-servico-1');
+    let card2 = document.getElementById('card-servico-2');
+    let card3 = document.getElementById('card-servico-3');
+
+    card1.style.borderColor = "var(--plug-gray)";
+    card1.style.background = "var(--plug-black)";
+    card2.style.borderColor = "var(--plug-gray)";
+    card2.style.background = "var(--plug-black)";
+    card3.style.borderColor = "var(--plug-gray)";
+    card3.style.background = "var(--plug-black)";
+
+    // APLICANDO OS TEXTOS SABOROSOS E CALIBRADOS SOLICITADOS
+    if(totalScore >= 0 && totalScore <= 64){
+      statusEl.innerText="Sua rotina parece ter pontos de atrito que possivelmente consomem sua energia. O caminho provável para você é uma interação pontual para situações específicas no seu dia a dia.";
+      servicoRecomendadoGlobal = "Ajustes de Rotina (Sessões Pontuais)";
+      document.getElementById('badge-rec-1').classList.remove('hidden');
+      card1.style.borderColor = "var(--theme-accent)";
+      card1.style.background = "rgba(53,104,89,0.22)";
+    } else if(totalScore >= 65 && totalScore <= 84){
+      statusEl.innerText="Sua casa parece ter uma base, mas a manutenção provavelmente exige esforço a mais. O formato provável para você é de estruturação de fluxos para que a rotina funcione com mais leveza.";
+      servicoRecomendadoGlobal = "Casa em Ordem (Assessoria Estrutural)";
+      document.getElementById('badge-rec-2').classList.remove('hidden');
+      card2.style.borderColor = "var(--theme-accent)";
+      card2.style.background = "rgba(53,104,89,0.22)";
+    } else {
+      statusEl.innerText="Sua residência pode estar com sobrecarga que exige atenção aprofundada. O formato provável para você é um aprofundamento estrutural e personalizado para transformar a casa no suporte que você merece.";
+      servicoRecomendadoGlobal = "Experiência Residencial Exclusiva";
+      document.getElementById('badge-rec-3').classList.remove('hidden');
+      card3.style.borderColor = "var(--theme-accent)";
+      card3.style.background = "rgba(53,104,89,0.22)";
+    }
+
+    criteriosEl.innerHTML='';
+    userScores.forEach(item=>{
+      let divItem = document.createElement('div');
+      divItem.style.cssText = "background:var(--plug-dark);border:1px solid var(--plug-gray);border-radius:12px;padding:1rem;";
+      divItem.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem">
+          <strong style="color:var(--plug-white);font-size:.9rem">&#x1F4CC; ${item.pilar}</strong>
+          <span style="font-size:.7rem;font-weight:900;background:var(--theme-bg-soft);color:var(--theme-accent);padding:.2rem .6rem;border-radius:6px">${item.points} / ${item.max} pts</span>
+        </div>
+        <p style="color:var(--plug-white);font-weight:600;font-size:.84rem;margin-bottom:.3rem;line-height:1.4">P: ${item.question}</p>
+        <p style="color:var(--theme-accent);font-size:.82rem;margin-bottom:.5rem;line-height:1.4">R: "${item.answerText}"</p>
+        <p style="color:var(--plug-muted);font-size:.8rem;line-height:1.4;border-top:1px solid var(--plug-gray);padding-top:.4rem"><strong>Análise:</strong> ${item.feedback}</p>
+      `;
+      criteriosEl.appendChild(divItem);
+    });
+
+    if(penaltyGeo > 0){
+      let divPenalidade = document.createElement('div');
+      divPenalidade.style.cssText = "background:var(--plug-dark);border:1px solid var(--plug-gray);border-radius:12px;padding:1rem;";
+      divPenalidade.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.35rem"><strong style="color:var(--plug-white);font-size:.9rem">&#x1F4CD; Localização (${cidade})</strong><span style="font-size:.7rem;font-weight:900;background:var(--theme-bg-soft);color:var(--theme-accent);padding:.2rem .6rem;border-radius:6px">-${penaltyGeo} pts</span></div><p style="color:var(--plug-muted);font-size:.82rem;line-height:1.5">Ajuste logístico regional para ponderação de viabilidade de atendimento.</p>`;
+      criteriosEl.appendChild(divPenalidade);
+    }
+  }, 1000);
+}
+
+function selecionarServico(nomeServico) {
+  let nome = globalLeadData.nome;
+  let whatsapp = globalLeadData.whatsapp;
+  let cidade = globalLeadData.cidade;
+  let imovel = globalLeadData.imovel;
+  let desafio = globalLeadData.desafio;
+  let totalScore = globalLeadData.scoreTotal;
+
+  let relatorioTexto = `*RELATÓRIO PRELIMINAR - EHO*\n`;
+  relatorioTexto += `� *Nome:* ${nome}\n`;
+  relatorioTexto += `� *Local:* ${cidade} | � *Imóvel:* ${imovel}\n`;
+  relatorioTexto += `� *Desafio Principal:* ${desafio}\n`;
+  relatorioTexto += `⭐ *Nível de Organização:* ${totalScore}/100 pontos\n`;
+  relatorioTexto += `� *Serviço Recomendado pelo Sistema:* ${servicoRecomendadoGlobal}\n`;
+  relatorioTexto += `� *Serviço Escolhido pelo Cliente:* *${nomeServico}*\n\n`;
+  relatorioTexto += `� *Respostas Detalhadas:*\n`;
+  
+  globalLeadData.respostas.forEach((item, idx) => {
+    relatorioTexto += `\n*${idx + 1}. [${item.pilar}]* (${item.pontos} pts)\n`;
+    relatorioTexto += `❓ *P:* ${item.pergunta}\n`;
+    relatorioTexto += `✔️ *R:* ${item.resposta}\n`;
+  });
+
+  let msgWpp = encodeURIComponent(`Olá! Me chamo ${nome}, realizei o diagnóstico EHO, meu nível foi ${totalScore}/100 e escolhi o pacote *${nomeServico}*.\n\nAqui está o meu relatório:\n\n` + relatorioTexto);
+  let linkWpp = `https://wa.me/5511911595028?text=${msgWpp}`;
+
+  if(WEBHOOK_URL_PLANILHA && WEBHOOK_URL_PLANILHA.startsWith('http')) {
+    let payloadCompleto = {
+      ...globalLeadData,
+      servicoRecomendado: servicoRecomendadoGlobal,
+      servicoSelecionado: nomeServico
+    };
+    
+    fetch(WEBHOOK_URL_PLANILHA, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payloadCompleto)
+    }).catch(err => console.log('Erro ao enviar webhook:', err));
+  }
+
+  window.open(linkWpp, '_blank');
+}
+
+function animateScore(target){
+  let current=0;
+  let interval=setInterval(()=>{
+    if(current>=target){
+      current=target;
+      clearInterval(interval);
+    }
+    document.getElementById('score-value').innerText=current;
+    let offset=CIRCUMFERENCE-(current/100)*CIRCUMFERENCE;
+    document.getElementById('score-circle').style.strokeDashoffset=offset;
+    current++;
+  }, 15);
+}
+</script>
+</body>
+</html>
